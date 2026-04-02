@@ -241,7 +241,9 @@ footer {
 }
 
 footer a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: #ffffff;
   color: #6B8299;
   font-weight: 600;
