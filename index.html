@@ -6,8 +6,8 @@
   <title>Farmacia Gallego</title>
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="logo-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="logo-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/logo-192x192.png">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -18,10 +18,7 @@
   <meta property="og:description" content="Tu farmacia de confianza en Marbella y Fiñana">
   <meta property="og:image" content="images/logo.png">
   <meta property="og:type" content="website">
-
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="es" href="https://farmaciagallego.github.io/">
-  <link rel="alternate" hreflang="en" href="https://farmaciagallego.github.io/?lang=en">
+  <meta property="og:url" content="https://farmaciagallego.github.io/">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -40,7 +37,11 @@
       },
       "telephone": "+34952867025",
       "url": "https://farmaciagallego.github.io",
-      "sameAs": ["https://instagram.com/farmaciagallego"]
+      "sameAs": ["https://instagram.com/farmaciagallego"],
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "21:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "15:00"}
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -55,7 +56,12 @@
         "addressCountry": "ES"
       },
       "telephone": "+34950352024",
-      "url": "https://farmaciagallego.github.io"
+      "url": "https://farmaciagallego.github.io",
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "14:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00"}
+      ]
     }
   ]
   </script>
@@ -78,6 +84,7 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <h1>Farmacia Gallego</h1>
     <p class="lang-es">Tu farmacia de confianza en Marbella y Fiñana</p>
     <p class="lang-en">Your trusted pharmacy in Marbella and Fiñana</p>
   </section>
@@ -109,7 +116,20 @@
             <dd><a href="tel:+34952867025">952 867 025</a></dd>
 
             <dt>WhatsApp</dt>
-            <dd><a href="https://wa.me/34669980007" target="_blank" rel="noopener noreferrer">WhatsApp</a></dd>
+            <dd><a href="https://wa.me/34669980007" target="_blank" rel="noopener noreferrer">669 980 007</a></dd>
+
+            <dt class="lang-es">Horario</dt>
+            <dt class="lang-en">Opening Hours</dt>
+            <dd class="hours">
+              <span class="lang-es">Lunes a Viernes: 9:30 - 21:00</span>
+              <span class="lang-en">Monday to Friday: 9:30 - 21:00</span>
+              <br>
+              <span class="lang-es">S&aacute;bados: 10:00 - 15:00</span>
+              <span class="lang-en">Saturday: 10:00 - 15:00</span>
+              <br>
+              <span class="lang-es">Domingos: Cerrado</span>
+              <span class="lang-en">Sunday: Closed</span>
+            </dd>
           </dl>
 
           <div class="map-container">
@@ -138,6 +158,19 @@
             <dt class="lang-es">Tel&eacute;fono</dt>
             <dt class="lang-en">Phone</dt>
             <dd><a href="tel:+34950352024">950 352 024</a></dd>
+
+            <dt class="lang-es">Horario</dt>
+            <dt class="lang-en">Opening Hours</dt>
+            <dd class="hours">
+              <span class="lang-es">Lunes a Viernes: 9:00 - 14:00 y 17:00 - 20:00</span>
+              <span class="lang-en">Monday to Friday: 9:00 - 14:00 and 17:00 - 20:00</span>
+              <br>
+              <span class="lang-es">S&aacute;bados: 10:00 - 14:00</span>
+              <span class="lang-en">Saturday: 10:00 - 14:00</span>
+              <br>
+              <span class="lang-es">Domingos: Cerrado</span>
+              <span class="lang-en">Sunday: Closed</span>
+            </dd>
           </dl>
 
           <div class="map-container">

@@ -113,6 +113,12 @@ header {
   padding: 80px 1.5rem;
 }
 
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
 .hero p {
   font-size: 1.5rem;
   max-width: 600px;
