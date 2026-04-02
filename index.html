@@ -1,410 +1,210 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacia Gallego - Tu farmacia de confianza</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="css2.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmacia Gallego</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/logo-192x192.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO / OpenGraph -->
+  <meta name="description" content="Farmacia Gallego - Tu farmacia de confianza en Marbella y Fiñana">
+  <meta property="og:title" content="Farmacia Gallego">
+  <meta property="og:description" content="Tu farmacia de confianza en Marbella y Fiñana">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://farmaciagallego.github.io/">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Farmacia Gallego Marbella",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Pablo Casals, 7",
+        "addressLocality": "Marbella",
+        "addressRegion": "Málaga",
+        "postalCode": "29602",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34952867025",
+      "url": "https://farmaciagallego.github.io",
+      "sameAs": ["https://instagram.com/farmaciagallego"],
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "21:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "15:00"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Farmacia Gallego Fiñana",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Vistillas, 3",
+        "addressLocality": "Fiñana",
+        "addressRegion": "Almería",
+        "postalCode": "04500",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34950352024",
+      "url": "https://farmaciagallego.github.io",
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "14:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00"}
+      ]
+    }
+  ]
+  </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" style="background: rgba(255, 255, 255, 0.98); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-pills"></i>
-                    <span>Farmacia Gallego</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="#productos" class="nav-link">Productos</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                </ul>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Bienvenido a Farmacia Gallego</h1>
-            <p class="hero-subtitle">Tu salud y bienestar son nuestra prioridad. Más de 20 años cuidando de ti y tu familia.</p>
-            <div class="hero-buttons">
-                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
-            </div>
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img src="images/logo.png" alt="Farmacia Gallego logo" height="40">
+        <span class="site-name">Farmacia Gallego</span>
+      </div>
+      <div class="lang-toggle">
+        <button data-lang-toggle="es">ES</button>
+        <button data-lang-toggle="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Farmacia Gallego</h1>
+    <p class="lang-es">Tu farmacia de confianza en Marbella y Fiñana</p>
+    <p class="lang-en">Your trusted pharmacy in Marbella and Fiñana</p>
+  </section>
+
+  <!-- ===== LOCATIONS ===== -->
+  <main>
+    <section class="locations">
+      <h2 class="lang-es">Nuestras Farmacias</h2>
+      <h2 class="lang-en">Our Pharmacies</h2>
+
+      <div class="locations-grid">
+
+        <!-- Marbella -->
+        <div class="location-card">
+          <h3>Marbella</h3>
+
+          <div class="photos">
+            <img src="images/marbella/interior1.jpg" alt="Farmacia Gallego Marbella interior 1">
+            <img src="images/marbella/interior2.jpg" alt="Farmacia Gallego Marbella interior 2">
+          </div>
+
+          <dl class="contact-info">
+            <dt class="lang-es">Direcci&oacute;n</dt>
+            <dt class="lang-en">Address</dt>
+            <dd>Calle Pablo Casals, 7, 29602 Marbella, M&aacute;laga</dd>
+
+            <dt class="lang-es">Tel&eacute;fono</dt>
+            <dt class="lang-en">Phone</dt>
+            <dd><a href="tel:+34952867025">952 867 025</a></dd>
+
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/34669980007" target="_blank" rel="noopener noreferrer">669 980 007</a></dd>
+
+            <dt class="lang-es">Horario</dt>
+            <dt class="lang-en">Opening Hours</dt>
+            <dd class="hours">
+              <span class="lang-es">Lunes a Viernes: 9:30 - 21:00</span>
+              <span class="lang-en">Monday to Friday: 9:30 - 21:00</span>
+              <br>
+              <span class="lang-es">S&aacute;bados: 10:00 - 15:00</span>
+              <span class="lang-en">Saturday: 10:00 - 15:00</span>
+              <br>
+              <span class="lang-es">Domingos: Cerrado</span>
+              <span class="lang-en">Sunday: Closed</span>
+            </dd>
+          </dl>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.559170499399!2d-4.896852024219716!3d36.50896908406233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7328001c926759%3A0x693bf7ba897ffbd4!2sFarmacia%20Gallego!5e1!3m2!1sen!2ses!4v1775146044136!5m2!1sen!2ses"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Farmacia Gallego Marbella en Google Maps">
+            </iframe>
+          </div>
         </div>
-        <div class="hero-image">
-            <img src="interior1.jpg" alt="Interior de Farmacia Gallego" style="opacity: 0.3; transition: opacity 0.3s; transform: translateY(562.267px);">
+
+        <!-- Finana -->
+        <div class="location-card">
+          <h3>Fi&ntilde;ana</h3>
+
+          <div class="photos">
+            <img src="images/finana/IMG_20191230_202409.jpg" alt="Farmacia Gallego Fiñana interior">
+          </div>
+
+          <dl class="contact-info">
+            <dt class="lang-es">Direcci&oacute;n</dt>
+            <dt class="lang-en">Address</dt>
+            <dd>Calle Vistillas, 3, 04500 Fi&ntilde;ana, Almer&iacute;a</dd>
+
+            <dt class="lang-es">Tel&eacute;fono</dt>
+            <dt class="lang-en">Phone</dt>
+            <dd><a href="tel:+34950352024">950 352 024</a></dd>
+
+            <dt class="lang-es">Horario</dt>
+            <dt class="lang-en">Opening Hours</dt>
+            <dd class="hours">
+              <span class="lang-es">Lunes a Viernes: 9:00 - 14:00 y 17:00 - 20:00</span>
+              <span class="lang-en">Monday to Friday: 9:00 - 14:00 and 17:00 - 20:00</span>
+              <br>
+              <span class="lang-es">S&aacute;bados: 10:00 - 14:00</span>
+              <span class="lang-en">Saturday: 10:00 - 14:00</span>
+              <br>
+              <span class="lang-es">Domingos: Cerrado</span>
+              <span class="lang-en">Sunday: Closed</span>
+            </dd>
+          </dl>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.1797289422375!2d-2.842056124192405!3d37.170596146733104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7023e711001a87%3A0x5b01820bafdaa5f!2sFarmacia%20Gallego%20Fi%C3%B1ana!5e1!3m2!1sen!2ses!4v1775146743984!5m2!1sen!2ses"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Farmacia Gallego Fiñana en Google Maps">
+            </iframe>
+          </div>
         </div>
+
+      </div><!-- /.locations-grid -->
     </section>
+  </main>
 
-    <!-- Servicios Destacados -->
-    <section class="services-preview">
-        <div class="container">
-            <h2 class="section-title">Servicios Destacados</h2>
-            <div class="services-grid">
-                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-icon">
-                        <i class="fas fa-prescription-bottle-alt"></i>
-                    </div>
-                    <h3>Dispensación de Medicamentos</h3>
-                    <p>Atención personalizada y asesoramiento farmacéutico profesional.</p>
-                </div>
-                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Control de Salud</h3>
-                    <p>Medición de tensión arterial, glucosa y otros parámetros vitales.</p>
-                </div>
-                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Consulta Farmacéutica</h3>
-                    <p>Asesoramiento sobre medicamentos y tratamientos personalizados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <a href="https://instagram.com/farmaciagallego" target="_blank" rel="noopener noreferrer">
+      <svg class="icon-instagram" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 011.523.99 4.088 4.088 0 01.99 1.524c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 01-.99 1.523 4.088 4.088 0 01-1.524.99c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 01-1.523-.99 4.088 4.088 0 01-.99-1.524c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 01.99-1.523A4.088 4.088 0 015.15 2.636c.46-.163 1.26-.349 2.43-.403C8.845 2.175 9.225 2.163 12 2.163M12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a5.882 5.882 0 00-2.126 1.384A5.882 5.882 0 00.63 4.14C.333 4.902.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.059 1.277.261 2.15.558 2.912a5.882 5.882 0 001.384 2.126 5.882 5.882 0 002.126 1.384c.762.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.277-.059 2.15-.261 2.912-.558a5.882 5.882 0 002.126-1.384 5.882 5.882 0 001.384-2.126c.297-.762.499-1.635.558-2.913C23.986 15.668 24 15.259 24 12s-.014-3.668-.072-4.948c-.059-1.277-.261-2.15-.558-2.912a5.882 5.882 0 00-1.384-2.126A5.882 5.882 0 0019.86.63C19.098.333 18.225.131 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      <span class="lang-es">S&iacute;guenos en Instagram</span>
+      <span class="lang-en">Follow us on Instagram</span>
+    </a>
+    <p class="copyright">&copy; 2026 Farmacia Gallego</p>
+  </footer>
 
-    <!-- Nosotros -->
-    <section id="nosotros" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <h2 class="section-title">Sobre Nosotros</h2>
-                    <p>Farmacia Gallego es una farmacia familiar con más
- de dos décadas de experiencia sirviendo a nuestra comunidad. Nos
-enorgullecemos de ofrecer un servicio personalizado y de calidad, donde
-cada cliente recibe la atención que merece.</p>
-                    <p>Nuestro equipo de farmacéuticos altamente
-cualificados está comprometido con tu salud y bienestar, proporcionando
-asesoramiento experto y productos de la más alta calidad.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-award"></i>
-                            <span>Más de 20 años de experiencia</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-users"></i>
-                            <span>Atención personalizada</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Productos de calidad garantizada</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <img src="interior2.jpg" alt="Farmacéutico atendiendo a cliente" style="opacity: 0.3; transition: opacity 0.3s;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-list">
-                <div class="service-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-content">
-                        <h3>Dispensación de Medicamentos</h3>
-                        <p>Dispensamos medicamentos con y sin receta
-médica, asegurando el cumplimiento de todas las normativas sanitarias y
-proporcionando información detallada sobre su uso correcto.</p>
-                        <ul>
-                            <li>Medicamentos con receta</li>
-                            <li>Medicamentos sin receta</li>
-                            <li>Asesoramiento farmacéutico</li>
-                            <li>Seguimiento farmacoterapéutico</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-content">
-                        <h3>Servicios de Salud</h3>
-                        <p>Ofrecemos diversos servicios de control y seguimiento de la salud para ayudarte a mantener un estilo de vida saludable.</p>
-                        <ul>
-                            <li>Medición de tensión arterial</li>
-                            <li>Control de glucosa</li>
-                            <li>Medición de colesterol</li>
-                            <li>Peso y composición corporal</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="service-content">
-                        <h3>Productos de Parafarmacia</h3>
-                        <p>Amplia gama de productos para el cuidado personal, higiene, cosmética y bienestar general.</p>
-                        <ul>
-                            <li>Productos de higiene personal</li>
-                            <li>Cosmética y cuidado de la piel</li>
-                            <li>Productos para bebés</li>
-                            <li>Suplementos nutricionales</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Productos -->
-    <section id="productos" class="products">
-        <div class="container">
-            <h2 class="section-title">Nuestros Productos</h2>
-            <div class="products-list">
-                <ul>
-                    <li>Medicamentos con receta</li>
-                    <li>Medicamentos sin receta</li>
-                    <li>Genéricos y de marca</li>
-                    <li>Homeopáticos y fitoterapéuticos</li>
-                    <li>Productos de cuidado personal y cosmética</li>
-                    <li>Productos de higiene diaria</li>
-                    <li>Productos de nutrición y dietética</li>
-                    <li>Productos de cuidado del bebé</li>
-                    <li>Productos ortopédicos</li>
-                    <li>Aparatos de salud</li>
-                    <li>Productos de primeros auxilios</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Horarios -->
-    <section class="schedule">
-        <div class="container">
-            <h2 class="section-title">Horarios de Atención</h2>
-            <div class="schedule-grid">
-                <div class="schedule-item">
-                    <h3>Lunes a Viernes</h3>
-                    <p>9:30 - 21:00</p>
-                </div>
-                <div class="schedule-item">
-                    <h3>Sábados</h3>
-                    <p>10:00 - 15:00</p>
-                </div>
-                <div class="schedule-item">
-                    <h3>Domingos</h3>
-                    <p>Cerrado</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>C. Pablo Casals, 7
-                               <br>29602 Marbella, Málaga<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>952 867 025</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/34669980007" target="_blank">
-                                Enviar Mensaje a +34 669 98 00 07</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:farmacia_gallego@yahoo.es"> farmacia_gallego@yahoo.es</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.3598092403754!2d-4.896857388040943!3d36.50896908394574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7328001c926759%3A0x693bf7ba897ffbd4!2sFarmacia%20Gallego!5e1!3m2!1sen!2ses!4v1756378723328!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-pills"></i>
-                        <span>Farmacia Gallego</span>
-                    </div>
-                    <p>Tu farmacia de confianza desde hace más de 20 años.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p><i class="fas fa-phone"></i> 952 867 025</p>
-                    <p><i class="fas fa-envelope"></i> farmacia_gallego@yahoo.es</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Farmacia Gallego. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-      <style>
-        :host {
-          /* Default width for the dialog, can be overridden by the 'width' attribute */
-          --lit-html-dialog-default-width: 400px;
-          /* --dynamic-dialog-width will be set on the host instance via JS */
-          --lit-html-dialog-font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-          --lit-html-dialog-surface-bg: white;
-          --lit-html-dialog-border-main: rgba(0, 0, 0, 0.06);
-          --lit-html-dialog-text-primary: #34322D;
-          --lit-html-dialog-text-tertiary: #858481;
-          --lit-html-dialog-text-white: white;
-          --lit-html-dialog-icon-tertiary: #858481;
-          --lit-html-dialog-border-btn-main: rgba(0, 0, 0, 0.12);
-          --lit-html-dialog-function-error-bg: #F25A5A;
-          --lit-html-dialog-button-default-bg: transparent;
-          --lit-html-dialog-box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.15);
-          --lit-html-dialog-border-radius: 20px;
-        }
-
-        dialog {
-          /* Use the dynamic width variable, falling back to the default width */
-          width: var(--dynamic-dialog-width, var(--lit-html-dialog-default-width));
-          max-width: 90vw; /* Add a max-width to prevent overflow on small screens */
-
-          background: var(--lit-html-dialog-surface-bg);
-          box-shadow: var(--lit-html-dialog-box-shadow);
-          border-radius: var(--lit-html-dialog-border-radius);
-          border: 1px var(--lit-html-dialog-border-main) solid;
-          padding: 0;
-          margin: auto;
-          overflow: visible;
-        }
-
-        dialog::backdrop {
-          background: rgba(0, 0, 0, 0.3);
-        }
-
-        .dialog-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          padding: 20px 16px 10px 20px;
-          gap: 10px;
-        }
-
-        .dialog-title {
-          flex: 1 1 0;
-          color: var(--lit-html-dialog-text-primary);
-          font-size: 18px;
-          font-family: var(--lit-html-dialog-font-family);
-          font-weight: 600;
-          line-height: 24px;
-          word-wrap: break-word;
-        }
-
-        .dialog-close-button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-          width: 28px;
-          height: 28px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: var(--lit-html-dialog-icon-tertiary);
-          font-size: 18px;
-          font-family: var(--lit-html-dialog-font-family);
-          font-weight: 500;
-          line-height: 1;
-        }
-        .dialog-close-button:hover {
-            color: var(--lit-html-dialog-text-primary);
-        }
-
-        .dialog-body {
-          padding: 0px 20px ;
-          color: var(--lit-html-dialog-text-tertiary);
-          font-size: 14px;
-          font-family: var(--lit-html-dialog-font-family);
-          font-weight: 400;
-          line-height: 22px;
-          word-wrap: break-word;
-        }
-
-        .dialog-footer {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 12px;
-          padding: 20px;
-        }
-
-        .dialog-footer ::slotted(.dialog-button) {
-          min-height: 36px;
-          padding: 8px 12px;
-          border-radius: 10px;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 20px;
-          border: none;
-          cursor: pointer;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          font-family: var(--lit-html-dialog-font-family);
-        }
-        .dialog-footer ::slotted(.dialog-button-default) {
-          min-width: 64px;
-          color: var(--lit-html-dialog-text-primary);
-          background-color: var(--lit-html-dialog-button-default-bg);
-          border: 1px solid var(--lit-html-dialog-border-btn-main);
-        }
-        .dialog-footer ::slotted(.dialog-button-default:hover) {
-            background-color: rgba(0,0,0,0.05);
-        }
-        .dialog-footer ::slotted(.dialog-button-error) {
-          min-width: 74px;
-          color: var(--lit-html-dialog-text-white);
-          background-color: var(--lit-html-dialog-function-error-bg);
-        }
-        .dialog-footer ::slotted(.dialog-button-error:hover) {
-            opacity: 0.9;
-        }
-      </style>
+  <script src="script.js"></script>
 </body>
+</html>
