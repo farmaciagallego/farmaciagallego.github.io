@@ -1,0 +1,330 @@
+/* ============================================================
+   Farmacia Gallego – styles.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Reset & base
+   ---------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #333333;
+  background: #F9FAF7;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #8CB43D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6A8F2B;
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------
+   Header / Nav
+   ---------------------------------------------------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-brand img {
+  height: 40px;
+  width: auto;
+}
+
+.site-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Language toggle – pill-shaped button pair */
+.lang-toggle {
+  display: flex;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid #8CB43D;
+}
+
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8CB43D;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-toggle button:hover {
+  background: #f0f7e0;
+}
+
+.lang-toggle button.active {
+  background: #8CB43D;
+  color: #ffffff;
+}
+
+/* ----------------------------------------------------------
+   Hero
+   ---------------------------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, #8CB43D 0%, #6A8F2B 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 1.5rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* ----------------------------------------------------------
+   Locations section
+   ---------------------------------------------------------- */
+.locations {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.locations > h2 {
+  font-size: 1.75rem;
+  color: #333333;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Location card */
+.location-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card h3 {
+  font-size: 1.35rem;
+  color: #333333;
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+/* Photo mini-grid */
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0 1.25rem 1rem;
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Contact info (dl / dt / dd) */
+.contact-info {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.contact-info dt {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B8299;
+  margin-top: 0.75rem;
+}
+
+.contact-info dt:first-child {
+  margin-top: 0;
+}
+
+.contact-info dd {
+  margin-left: 0;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.contact-info dd a {
+  font-weight: 500;
+}
+
+/* Map container – responsive iframe */
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 1.25rem 1.25rem;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ----------------------------------------------------------
+   Footer
+   ---------------------------------------------------------- */
+footer {
+  background: #6B8299;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer a {
+  display: inline-block;
+  background: #ffffff;
+  color: #6B8299;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+footer a:hover {
+  background: #8CB43D;
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ----------------------------------------------------------
+   Language visibility (critical)
+   ---------------------------------------------------------- */
+
+/* Default: show Spanish, hide English */
+.lang-en {
+  display: none;
+}
+
+/* When html has lang="en": show English, hide Spanish */
+html[lang="en"] .lang-en {
+  display: revert;
+}
+
+html[lang="en"] .lang-es {
+  display: none;
+}
+
+/* ----------------------------------------------------------
+   Responsive – 768px (tablet / mobile)
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    margin: 0 0 1.25rem;
+    border-radius: 0;
+  }
+
+  .hero {
+    padding: 50px 1.25rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ----------------------------------------------------------
+   Responsive – 480px (small phones)
+   ---------------------------------------------------------- */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .site-name {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .photos {
+    grid-template-columns: 1fr;
+  }
+
+  .locations > h2 {
+    font-size: 1.4rem;
+  }
+
+  .location-card h3 {
+    font-size: 1.15rem;
+  }
+}
